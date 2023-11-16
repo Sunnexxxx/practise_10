@@ -1,0 +1,18 @@
+{% extends 'layout.html'%}
+{% block title %}Proiles list{% endblock %}
+{% block content %}
+<div class="profiles">
+    <h1>Profile list</h1>
+    <a href="{% url 'register_profile' %}">Register a New Profile</a>
+        {% for profile in profiles %}
+            <div class="min-info">
+                <a href="{% url 'user_profile' profile.nickname %}">{{ profile.nickname }}</a>
+                <p>Name: {{ profile.username }}</p>
+                <p>Age: {{ profile.age }}</p>
+                <p>Gender: {{ profile.gender }}</p>
+                <p>City: {{ profile.city }}</p>
+            </div>
+        {% endfor %}
+</div>
+{% endblock %}
+

@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+    <div class="info">
+        <h1>User Profile</h1>
+        <p>Username: {{ profile.username }}</p>
+        <p>Surname: {{ profile.surname }}</p>
+        <p>Age: {{ profile.age }}</p>
+        <p>Gender: {{ profile.gender }}</p>
+        <p>City: {{ profile.city }}</p>
+        <p>Hobbies: {{ profile.hobbies }}</p>
+        <p>Favorite Music: {{ profile.favorite_music }}</p>
+        <p>Favorite Food: {{ profile.favorite_food }}</p>
+    </div>
+{% endblock %}
